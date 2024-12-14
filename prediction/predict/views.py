@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import render
 from .ml_model import PostQualityPredictor
+# Create your views here.
+
 
 def predict_post_quality(request):
     prediction = None
@@ -19,4 +21,3 @@ def predict_post_quality(request):
     
     return render(request, 'predict.html', {'prediction': prediction})
 
-# Create your views here.
