@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Quality Predictor</title>
+</head>
+<body>
+    <h1>Post Quality Prediction</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Reputation:</label>
+        <input type="number" name="reputation" required><br>
+        
+        <label>Interaction:</label>
+        <input type="number" name="interaction" required><br>
+        
+        <input type="submit" value="Predict Quality">
+    </form>
+    
+    {% if prediction %}
+        <h2>Predicted Quality: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
