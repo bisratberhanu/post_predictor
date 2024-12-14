@@ -7,7 +7,7 @@ def predict_post_quality(request):
     if request.method == 'POST':
         try:
             reputation = float(request.POST.get('reputation'))
-            interaction = int(request.POST.get('interaction'))
+            interaction = float(request.POST.get('interaction'))
             
             predictor = PostQualityPredictor()
             prediction = predictor.predict(reputation, interaction)

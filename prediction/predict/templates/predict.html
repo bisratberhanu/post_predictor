@@ -2,16 +2,57 @@
 <html>
 <head>
     <title>Post Quality Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #4cae4c;
+        }
+    </style>
 </head>
 <body>
     <h1>Post Quality Prediction</h1>
+    <p>Used to predict post quality given user reputation and interaction (taker_mpxr_delta)</p>
     <form method="post">
         {% csrf_token %}
-        <label>Reputation:</label>
-        <input type="number" name="reputation" required><br>
+        <label>User Reputation:</label>
+        <input type="number" name="reputation" step="any" required><br>
         
-        <label>Interaction:</label>
-        <input type="number" name="interaction" required><br>
+        <label>Interaction (taker_mpxr_delta):</label>
+        <input type="number" name="interaction" step="any" required><br>
         
         <input type="submit" value="Predict Quality">
     </form>
