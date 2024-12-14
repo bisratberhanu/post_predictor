@@ -1,5 +1,7 @@
 # Post Quality Prediction
 
+## Demo Video
+A you tube video is available at [here](https://youtu.be/-OUQesOfjVU)
 
 This is a Django project called `prediction` that predicts the quality of a post for the platform [Mindplex.ai](https://mindplex.ai/). It accepts user reputation and interaction values and returns the predicted quality of the post.
 
