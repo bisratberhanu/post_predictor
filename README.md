@@ -32,15 +32,16 @@ To run the project, follow these steps:
     git clone <repository-url>
     ```
 
-2. Navigate to the `prediction` directory:
+
+2. Install the required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+3. Navigate to the `prediction` directory:
     ```sh
     cd prediction
     ```
 
-3. Install the required dependencies:
-    ```sh
-    pip install -r requirements.txt
-    ```
 
 4. Run the Django development server:
     ```sh
@@ -52,7 +53,3 @@ To run the project, follow these steps:
 ## Usage
 
 The HTML form allows users to input their reputation and interaction values. Upon submission, the form sends a POST request to the server, which uses the trained model to predict the quality of the post and displays the result.
-
-## License
-
-This project is licensed under the MIT License.
